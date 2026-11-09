@@ -1,0 +1,19 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+<Base title="Contact Asena Digital" meta_title="Contact | Asena Digital" description="Tell Asena Digital about your next website, software, e-commerce, mobile or AI project.">
+  <section class="section-ph pb-14"><div class="container pt-24"><p class="mb-5 text-xs uppercase tracking-[.25em] text-white/40">Contact</p><h1 class="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-7xl">Let's talk about<br/><span class="text-white/45">what you want to build.</span></h1><p class="mt-7 max-w-2xl text-lg leading-8 text-white/55">Share a little about your goals, timeline and requirements. We'll get back to you by email.</p></div></section>
+  <section class="section border-t border-white/10"><div class="container grid gap-12 lg:grid-cols-[.8fr_1.2fr]"><div class="space-y-8"><div><p class="mb-2 text-xs uppercase tracking-[.2em] text-white/40">Email</p><a href="mailto:main@asena.digital" class="text-xl text-white underline decoration-white/20 underline-offset-4">main@asena.digital</a></div><div><p class="mb-2 text-xs uppercase tracking-[.2em] text-white/40">Office</p><p class="max-w-sm leading-7 text-white/70">Balgat Mah. Ceyhun Atuf Kansu Cad. No: 36 İç Kapı No: 6<br/>Çankaya / Ankara, Türkiye</p></div><div><p class="mb-2 text-xs uppercase tracking-[.2em] text-white/40">Availability</p><p class="text-white/60">Working with clients worldwide.</p></div></div>
+    <form id="project-form" class="rounded-3xl border border-white/10 bg-white/[.03] p-7 sm:p-9"><div class="grid gap-5 sm:grid-cols-2"><label class="text-sm text-white/65">Full name<input required name="name" class="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-white/40" placeholder="Your name"/></label><label class="text-sm text-white/65">Work email<input required type="email" name="email" class="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-white/40" placeholder="you@company.com"/></label></div><label class="mt-5 block text-sm text-white/65">What do you need?<select name="service" class="mt-2 w-full rounded-xl border border-white/10 bg-[#101214] px-4 py-3 text-white outline-none focus:border-white/40"><option>Website Development</option><option>Custom Software</option><option>E-commerce Solutions</option><option>Mobile Application</option><option>AI & Automation</option><option>Technology Consulting</option><option>Other / Not sure yet</option></select></label><label class="mt-5 block text-sm text-white/65">Project details<textarea required name="message" rows="5" class="mt-2 w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none focus:border-white/40" placeholder="Tell us about your goals, requirements and timeline..."></textarea></label><button class="mt-6 rounded-full bg-[#e5e7e9] px-7 py-4 text-sm font-semibold text-black transition hover:bg-white" type="submit">Prepare email ↗</button><p id="form-note" class="mt-4 text-xs leading-6 text-white/40">Your email app will open with your project enquiry ready to send. No details are submitted to this website.</p></form>
+  </div></section>
+  <script>
+    const form = document.querySelector<HTMLFormElement>("#project-form");
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const subject = encodeURIComponent(`Project enquiry — ${data.get("service")}`);
+      const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\nService: ${data.get("service")}\n\nProject details:\n${data.get("message")}`);
+      window.location.href = `mailto:main@asena.digital?subject=${subject}&body=${body}`;
+    });
+  </script>
+</Base>

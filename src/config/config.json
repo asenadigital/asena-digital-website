@@ -1,0 +1,39 @@
+{
+  "site": {
+    "title": "Asena Digital | Technology & Digital Solutions",
+    "base_url": "https://asena.digital",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/asena-favicon.svg",
+    "logo": "/images/logo.svg",
+    "logo_width": "190",
+    "logo_height": "45",
+    "logo_text": "ASENA DIGITAL"
+  },
+  "settings": {
+    "sticky_header": true
+  },
+  "params": {
+    "contact_form_action": "#",
+    "checklist_form_action": "#",
+    "apply_form_action": "#",
+    "copyright": "© 2026 <strong>Asena Digital</strong>. All rights reserved.",
+    "footer_tagline": "Güvenle dijitalde. We build thoughtful digital products, software and technology experiences that move businesses forward.",
+    "footer_email": "main@asena.digital",
+    "footer_address": "Balgat Mah. Ceyhun Atuf Kansu Cad. No: 36 İç Kapı No: 6, Çankaya / Ankara, Türkiye"
+  },
+  "navigation_button": {
+    "enable": true,
+    "label": "Start a project",
+    "link": "/contact"
+  },
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+  "metadata": {
+    "meta_author": "Asena Digital",
+    "meta_image": "/images/asena-og.png",
+    "meta_description": "Asena Digital designs and develops websites, custom software, e-commerce platforms, mobile applications and AI-powered solutions for ambitious businesses worldwide."
+  }
+}

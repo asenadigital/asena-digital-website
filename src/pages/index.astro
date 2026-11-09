@@ -1,0 +1,55 @@
+---
+import Base from "@/layouts/Base.astro";
+const homepagePlans = [
+  { name: "Launch", price: "From $1,500", description: "For focused websites and landing pages.", features: ["Custom responsive design", "Up to 5 core pages", "Contact form & basic SEO", "Launch support"] },
+  { name: "Business", price: "From $3,500", description: "For growing businesses that need a stronger digital presence.", features: ["Custom multi-page website", "CMS-ready content structure", "Analytics & SEO foundations", "Third-party integrations"] },
+  { name: "Commerce", price: "From $5,000", description: "For brands ready to sell online.", features: ["E-commerce storefront", "Product & category setup", "Payment and shipping setup", "Order management basics"] }
+];
+---
+<Base title="Asena Digital | Technology Without Limits" meta_title="Asena Digital | Global Technology & Digital Solutions" description="Websites, custom software, e-commerce, mobile applications and AI solutions engineered for ambitious businesses worldwide.">
+  <section class="relative isolate overflow-hidden pt-44 pb-24 lg:pt-52 lg:pb-32">
+    <div class="absolute inset-0 -z-10" style="background:radial-gradient(ellipse at 50% 0%,rgba(190,195,202,.15),transparent 52%),linear-gradient(180deg,#0b0d0f 0%,#070809 78%)"></div>
+    <div class="absolute -top-24 left-1/2 -z-10 h-96 w-[60rem] -translate-x-1/2 rounded-full border border-white/5"></div>
+    <div class="container text-center">
+      <div class="mx-auto mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[.035] px-4 py-2 text-xs uppercase tracking-[.22em] text-white/65"><span class="h-1.5 w-1.5 rounded-full bg-[#d9dce0]"></span> Independent technology & digital studio</div>
+      <h1 class="mx-auto max-w-5xl text-5xl font-semibold leading-[1.04] tracking-[-.045em] text-white sm:text-6xl lg:text-8xl">Technology<br/><span class="bg-gradient-to-r from-white via-[#aeb3ba] to-[#666d75] bg-clip-text text-transparent">without limits.</span></h1>
+      <p class="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/60 sm:text-lg">We design and build digital experiences, intelligent software and scalable technology that help ambitious businesses move forward.</p>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center justify-center rounded-full bg-[#e5e7e9] px-7 py-4 text-sm font-semibold text-[#090a0b] transition hover:bg-white">Start a project <span class="ml-3">↗</span></a>
+        <a href="#services" class="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 text-sm font-medium text-white transition hover:border-white/40 hover:bg-white/5">Explore our services</a>
+      </div>
+      <div class="mx-auto mt-20 grid max-w-5xl grid-cols-2 gap-3 text-left md:grid-cols-4">
+        {['Digital strategy','Product design','Engineering','Intelligent automation'].map((item, i) => <div class="rounded-2xl border border-white/10 bg-white/[.025] p-5"><div class="mb-8 text-xs tracking-[.2em] text-white/35">0{i+1}</div><div class="text-sm font-medium text-white/80">{item}</div></div>)}
+      </div>
+    </div>
+  </section>
+  <section id="services" class="section border-t border-white/10">
+    <div class="container">
+      <div class="mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end"><div><p class="mb-4 text-xs uppercase tracking-[.25em] text-white/40">What we do</p><h2 class="max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">Technology built around <span class="text-white/45">your next move.</span></h2></div><p class="max-w-md text-base leading-7 text-white/55">From the first idea to a fully integrated digital ecosystem, we turn complex requirements into clear, dependable solutions.</p></div>
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {[
+          ['01','Website Development','High-performing corporate websites and landing pages built to communicate clearly, convert visitors and grow with your business.','/contact?service=website'],
+          ['02','Custom Software','Purpose-built web platforms, internal tools, dashboards and business systems designed around your workflows.','/contact?service=software'],
+          ['03','E-commerce Solutions','Flexible online stores, payment integrations and commerce experiences that make buying simple.','/contact?service=ecommerce'],
+          ['04','Mobile Applications','Intuitive iOS and Android applications that connect your customers, teams and services.','/contact?service=mobile'],
+          ['05','AI & Automation','Practical AI assistants, workflow automation and intelligent integrations that reduce repetitive work.','/contact?service=ai'],
+          ['06','Technology Consulting','Technical planning, architecture reviews and product guidance to help you make confident decisions.','/contact?service=consulting']
+        ].map(([n,title,desc,link]) => <a href={link} class="group min-h-64 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[.055] to-white/[.015] p-7 transition duration-300 hover:-translate-y-1 hover:border-white/25"><div class="mb-12 flex items-center justify-between"><span class="text-xs tracking-[.2em] text-white/35">{n}</span><span class="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/60 transition group-hover:bg-white group-hover:text-black">↗</span></div><h3 class="mb-3 text-2xl font-semibold text-white">{title}</h3><p class="max-w-sm text-sm leading-7 text-white/55">{desc}</p></a>)}
+      </div>
+    </div>
+  </section>
+  <section class="section border-t border-white/10">
+    <div class="container grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+      <div><p class="mb-4 text-xs uppercase tracking-[.25em] text-white/40">The Asena approach</p><h2 class="text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">Clarity first.<br/><span class="text-white/45">Craft in every detail.</span></h2><p class="mt-7 max-w-lg leading-8 text-white/55">We bring strategy, design and engineering together to create digital products that solve real problems. Every engagement starts with understanding your goals, your users and the outcomes that matter.</p><a href="/about" class="mt-8 inline-flex items-center gap-3 text-sm font-semibold text-white">Discover Asena Digital <span>↗</span></a></div>
+      <div class="rounded-[2rem] border border-white/10 bg-[#101214] p-7 sm:p-10"><div class="mb-8 flex items-center justify-between"><span class="text-xs uppercase tracking-[.22em] text-white/40">How we work</span><span class="text-xs text-white/35">01 — 04</span></div><div class="space-y-7">{[['01','Understand','We learn about your business, challenges and priorities.'],['02','Define','We shape a clear scope, roadmap and delivery plan.'],['03','Build','We design, develop and refine with care and transparency.'],['04','Evolve','We support launch and help your solution grow over time.']].map(([n,t,d])=><div class="flex gap-5 border-b border-white/10 pb-6 last:border-0 last:pb-0"><span class="pt-1 text-xs text-white/35">{n}</span><div><h3 class="mb-1 text-lg font-semibold text-white">{t}</h3><p class="text-sm leading-6 text-white/50">{d}</p></div></div>)}</div></div>
+    </div>
+  </section>
+  <section id="pricing" class="section border-t border-white/10">
+    <div class="container"><div class="mx-auto mb-14 max-w-2xl text-center"><p class="mb-4 text-xs uppercase tracking-[.25em] text-white/40">Transparent starting points</p><h2 class="text-4xl font-semibold tracking-tight text-white sm:text-5xl">A clear place to <span class="text-white/45">start.</span></h2><p class="mt-5 leading-7 text-white/55">Every project is different. These guide prices help you plan; your final proposal is tailored to scope and requirements.</p></div>
+      <div class="grid gap-4 lg:grid-cols-3">
+        {homepagePlans.map((plan,i)=><div class={`rounded-3xl border p-8 ${i===1?'border-white/35 bg-white/[.075]':'border-white/10 bg-white/[.025]'}`}><p class="mb-5 text-xs uppercase tracking-[.2em] text-white/45">{plan.name}</p><div class="mb-4 text-4xl font-semibold text-white">{plan.price}</div><p class="mb-8 min-h-12 text-sm leading-6 text-white/55">{plan.description}</p><ul class="mb-9 space-y-3">{plan.features.map(f=><li class="flex gap-3 text-sm text-white/70"><span class="text-white/50">✓</span>{f}</li>)}</ul><a href="/contact" class="block rounded-full border border-white/20 px-5 py-3 text-center text-sm font-semibold text-white transition hover:bg-white hover:text-black">Discuss your project ↗</a></div>)}
+      </div><p class="mt-6 text-center text-xs text-white/35">Custom software, mobile apps, AI solutions and complex integrations are quoted individually.</p><div class="mt-7 text-center"><a href="/pricing" class="text-sm text-white/65 underline underline-offset-4 hover:text-white">View all service pricing</a></div>
+    </div>
+  </section>
+  <section class="section border-t border-white/10"><div class="container rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#1b1e21] to-[#0c0e10] px-7 py-16 text-center sm:px-14"><p class="mb-4 text-xs uppercase tracking-[.25em] text-white/45">Have a project in mind?</p><h2 class="mx-auto max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">Let's build something<br/><span class="text-white/45">worth moving forward with.</span></h2><p class="mx-auto mt-6 max-w-xl leading-7 text-white/55">Tell us what you're working on. We'll help you find the right next step.</p><a href="/contact" class="mt-9 inline-flex rounded-full bg-[#e5e7e9] px-8 py-4 text-sm font-semibold text-black hover:bg-white">Talk to our team ↗</a></div></section>
+</Base>

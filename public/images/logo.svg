@@ -1,0 +1,10 @@
+<svg width="230" height="54" viewBox="0 0 230 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(2 3)">
+    <path d="M24 0L47 24L24 48L1 24L24 0Z" stroke="#D7D9DC" stroke-width="1.5"/>
+    <path d="M24 9L38 24L24 39L10 24L24 9Z" fill="url(#g)"/>
+    <path d="M24 9V39M10 24H38" stroke="#08090A" stroke-width="1.2"/>
+  </g>
+  <text x="61" y="27" fill="#F4F5F6" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="2.2">ASENA</text>
+  <text x="62" y="43" fill="#A5A9AE" font-family="Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="4.1">DIGITAL</text>
+  <defs><linearGradient id="g" x1="10" y1="9" x2="38" y2="39" gradientUnits="userSpaceOnUse"><stop stop-color="#F4F5F6"/><stop offset="1" stop-color="#777D84"/></linearGradient></defs>
+</svg>
